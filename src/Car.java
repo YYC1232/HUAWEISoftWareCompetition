@@ -1,3 +1,4 @@
+import java.util.List;
 
 public class Car {
 	public int carId;
@@ -5,12 +6,15 @@ public class Car {
 	public int endCrossId;
 	public int maxSpeed;
 	public int startTime;
-	public Car(int Id, int startId, int endId, int Speed, int Time) {
+	public int position;//标记汽车行走的路径个数
+	public static List<Integer> path;
+	public Car(int Id, int startId, int endId, int Speed, int Time ) {
 		carId = Id;
 		startCrossId = startId;
 		endCrossId = endId;
 		maxSpeed = Speed;
 		startTime = Time;
+		position = 0;
 	}
 	@Override
 	public String toString() {

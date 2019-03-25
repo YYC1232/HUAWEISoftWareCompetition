@@ -1,4 +1,5 @@
 import java.util.Iterator;
+import java.util.List;
 
 public class Cross {
 		public int crossId;
@@ -6,6 +7,10 @@ public class Cross {
 		public Road rightRoad;
 		public Road downRoad ;
 		public Road leftRoad ;
+		public List<Car> upList;
+        public List<Car> rightList;
+        public List<Car> downList;
+        public List<Car> leftList;
 		public Cross(int a,int b,int c,int d,int e) {
 			crossId = a;
 		    if(b == -1) setUpRoad(null);
@@ -17,7 +22,7 @@ public class Cross {
 		    if(e == -1) setLeftRoad(null);
 		    else setLeftRoad(DataProcess.roadMap.get(b)); 
 		}
-	
+	    
 		@Override
 		public String toString() {
 			return "Cross [crossId=" + crossId + ", upRoad=" + upRoad + ", rightRoad=" + rightRoad + ", downRoad="
