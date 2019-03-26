@@ -1,3 +1,4 @@
+import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.List;
 
@@ -7,20 +8,22 @@ public class Cross {
 		public Road rightRoad;
 		public Road downRoad ;
 		public Road leftRoad ;
-		public List<Car> upList;
-        public List<Car> rightList;
-        public List<Car> downList;
-        public List<Car> leftList;
+		public ArrayList<Car> list;
+		public ArrayList<Car> upList;
+        public ArrayList<Car> rightList;
+        public ArrayList<Car> downList;
+        public ArrayList<Car> leftList;
 		public Cross(int a,int b,int c,int d,int e) {
 			crossId = a;
 		    if(b == -1) setUpRoad(null);
 		    else setUpRoad(DataProcess.roadMap.get(b));
 		    if(c == -1) setRightRoad(null);
-		    else setRightRoad(DataProcess.roadMap.get(b));  
+		    else setRightRoad(DataProcess.roadMap.get(c));  
 		    if(d == -1) setDownRoad(null);
-		    else setDownRoad(DataProcess.roadMap.get(b));  
+		    else setDownRoad(DataProcess.roadMap.get(d));  
 		    if(e == -1) setLeftRoad(null);
-		    else setLeftRoad(DataProcess.roadMap.get(b)); 
+		    else setLeftRoad(DataProcess.roadMap.get(e)); 
+		    list = new ArrayList<Car>();
 		}
 	    
 		@Override

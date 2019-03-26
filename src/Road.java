@@ -2,19 +2,25 @@
 public class Road {
 		public int roadId;
 		public int roadLenth;
+		public int init_maxLimitSpeed;
 		public int maxLimitSpeed;
 		public int roadWeight;
 		public int startCrossId;
 		public int endCrossId;
 		public int weatherTwoWay;
+		public int init_box;
+		public int box;
 		public Road(int Id,int Lenth,int LimitSpeed,int Weight,int startId,int endId,int Twoway) {
 			roadId = Id;
 			roadLenth = Lenth;
+			init_maxLimitSpeed = LimitSpeed;
 			maxLimitSpeed = LimitSpeed;
 			roadWeight = Weight;
 			startCrossId = startId;
 			endCrossId = endId;
 			weatherTwoWay = Twoway;
+			init_box = Lenth*Weight;
+			box = Lenth*Weight;
 		}
 		@Override
 		public String toString() {
